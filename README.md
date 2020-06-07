@@ -1,2 +1,2 @@
-정한결\t20203140
-Kookmin Univ. SW
+20203140 JungHanGyul
+Kookmin Univ. SW.
