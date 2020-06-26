@@ -7,14 +7,15 @@ def application(environ, start_response) :
 	b = d.get('b', [''])[0]
 	sum = 0
 	mul = 0
-	if '' not in [a, b]:
-		a, b = int(a), int(b)
-		sum = [a+b]
-		mul = [a*b]
 
-        else :
-            sum = 0
-            mul = 0
+        try :
+	    a, b = int(a), int(b)
+	    sum = a+b
+	    mul = a*b
+
+        except ValueError :
+            sum = "Put integer only"
+            mul = "Put integer only"
 
 	response_body = html % {
 		'sum' : sum,
